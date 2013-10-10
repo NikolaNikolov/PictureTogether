@@ -13,7 +13,7 @@
             
             kendo.data.ObservableObject.fn.init.apply(that, []);
             
-            //that.isLoggedIn = true;
+            storage.setItem("sessionsKey", "pesho");
             
             if (storage.getItem("sessionsKey")) {
                 that.isLoggedIn = true;
