@@ -5,5 +5,5 @@
         app.application = new kendo.mobile.Application(document.body, {
             layout: "tabstrip-layout"
         });
-    }, false);    
+    }, false);
 })(window);

@@ -90,18 +90,18 @@
     app.locationService = {
         initLocation: function () {
             var mapOptions = {
-                    zoom: 15,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    zoomControl: true,
-                    zoomControlOptions: {
-                        position: google.maps.ControlPosition.LEFT_BOTTOM
-                    },
-    
-                    mapTypeControl: false,
-                    streetViewControl: false
-                };
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                },
 
-            map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);            
+                mapTypeControl: false,
+                streetViewControl: false
+            };
+
+            map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
             geocoder = new google.maps.Geocoder();
             app.locationService.viewModel.onNavigateHome.apply(app.locationService.viewModel, []);
         },
@@ -110,7 +110,7 @@
             //show loading mask in case the location is not loaded yet 
             //and the user returns to the same tab
             app.locationService.viewModel.showLoading();
-            
+
             //resize the map in case the orientation has been changed while showing other tab
             google.maps.event.trigger(map, "resize");
         },

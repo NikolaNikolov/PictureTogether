@@ -10,16 +10,16 @@
 
         init: function () {
             var that = this;
-            
+
             kendo.data.ObservableObject.fn.init.apply(that, []);
-            
+
             storage.setItem("sessionsKey", "pesho");
-            
+
             if (storage.getItem("sessionsKey")) {
                 that.isLoggedIn = true;
             }
         },
-        
+
         onLogin: function () {
             var that = this,
             username = that.get("username").trim(),
