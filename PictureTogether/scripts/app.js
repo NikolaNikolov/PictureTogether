@@ -5,5 +5,7 @@
         app.application = new kendo.mobile.Application(document.body, {
             layout: "tabstrip-layout"
         });
+
+        app.servicesBaseUrl = "http://picturetogether.apphb.com/api/";
     }, false);
 })(window);

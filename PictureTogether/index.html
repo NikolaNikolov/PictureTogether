@@ -11,6 +11,7 @@
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
+    <script src="http-requester.js"></script>
     <script src="scripts/login.js"></script>
     <script src="scripts/location.js"></script>
     <script src="scripts/weather.js"></script>
@@ -28,7 +29,7 @@
             <div class="logo"></div>
             <h3 data-bind="invisible: isLoggedIn">Enter your credentials:</h3>
             <h1 class="welcome" data-bind="visible: isLoggedIn">Welcome, <span data-bind="    text: username"></span>!
-                </h1>
+            </h1>
 
             <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
                 <li>

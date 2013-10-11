@@ -13,8 +13,6 @@
 
             kendo.data.ObservableObject.fn.init.apply(that, []);
 
-            storage.setItem("sessionsKey", "pesho");
-
             if (storage.getItem("sessionsKey")) {
                 that.isLoggedIn = true;
             }
@@ -33,7 +31,17 @@
                 return;
             }
 
-            that.set("isLoggedIn", true);
+            var data = {
+                username: username,
+                authCode: password
+            };
+            global.httpRequester.postJSON(app.servicesBaseUrl + "users/login", data,
+                function (loginData) {
+                    console.log(loginData);
+                }, function (error) {
+                    console.log(error);
+                });
+            //that.set("isLoggedIn", true);
         },
 
         onLogout: function () {
