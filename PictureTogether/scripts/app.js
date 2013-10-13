@@ -6,8 +6,8 @@
             layout: "tabstrip-layout"
         });
 
-        //app.servicesBaseUrl = "http://picturetogether.apphb.com/api/";
-        app.servicesBaseUrl = "http://localhost:61019/api/";
+        app.servicesBaseUrl = "http://picturetogether.apphb.com/api/";
+        //app.servicesBaseUrl = "http://localhost:61019/api/";
         global.httpRequester.getJSON(app.servicesBaseUrl + "appharbor/wakeup");
 
         document.addEventListener("online", function () {

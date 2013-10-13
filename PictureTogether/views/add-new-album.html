@@ -1,0 +1,21 @@
+﻿<div id="add-new-album"
+    data-role="view"
+    data-layout="tabstrip-layout-backbutton"
+    data-title="Enter album name"
+    data-model="app.addNewAlbumService.viewModel"
+    data-show="app.addNewAlbumService.show">
+
+    <div class="view-content">
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label>
+                    Album name
+                        <input type="text" data-bind="value: albumName" />
+                </label>
+            </li>
+        </ul>
+        <div class="buttonArea">
+            <a id="confirm-name" data-role="button" data-bind="click: onConfirmName" class="simple-button">Confirm name</a>
+        </div>
+    </div>
+</div>

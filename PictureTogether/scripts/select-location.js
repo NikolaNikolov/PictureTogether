@@ -84,6 +84,8 @@
                 map: map,
                 position: position
             });
+
+            app.lastMarker = that._lastMarker;
         }
     });
 
@@ -115,7 +117,10 @@
             app.locationService.viewModel.hideLoading();
         },
 
+        confirmLocation: function () {
+            console.log("confirmed");
+        },
+
         viewModel: new LocationViewModel()
     };
-}
-)(window);
+})(window);

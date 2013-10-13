@@ -19,13 +19,16 @@
             that.set("albumsDataSource", dataSource);
         },
 
-        viewShow: function () {
+        viewShow: function (newAlbum) {
             var that = this;
             var dataSource;
             var data;
             var newUsername = storage.getItem("username");
 
-            if (newUsername !== that.username) {
+            if (newAlbum) {
+                var albumToAdd = JSON.parse(newAlbum);
+                console.log(albumToAdd);
+            } else if (newUsername !== that.username) {
                 data = storage.getItem("albums");
                 if (data !== "null") {
                     data = JSON.parse(storage.getItem("albums"));
@@ -41,13 +44,21 @@
 
                 that.set("albumsDataSource", dataSource);
             }
+        },
+
+        onAddNewAlbum: function () {
+            app.application.navigate("views/select-location.html");
+        },
+
+        onAddExistingAlbum: function () {
+
         }
     });
 
     app.albumsService = {
         viewModel: new AlbumsViewModel(),
-        show: function () {
-            app.albumsService.viewModel.viewShow();
+        show: function (e) {
+            app.albumsService.viewModel.viewShow(e.view.params.newAlbum);
         }
     };
 })(window);

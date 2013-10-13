@@ -95,6 +95,19 @@
             } else {
                 that.viewShow(that.albumId);
             }
+        },
+
+        onShowLocation: function () {
+            var that = this;
+
+            if (that.album && that.album.id == that.albumId) {
+                app.application.navigate("views/album-location.html?location=" + JSON.stringify({
+                    latitude: that.album.latitude,
+                    longitude: that.album.longitude
+                }));
+            } else {
+                that.viewShow(that.albumId);
+            }
         }
     });
 
