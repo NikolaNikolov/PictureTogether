@@ -78,7 +78,7 @@ body, html {
 }
 
 /* MAP STYLES*/
-#map-canvas {
+#map-canvas, #album-map-canvas {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -243,11 +243,6 @@ body, html {
     border-color: #ababab;
 }
 
-.km-ios .km-view .km-content {
-    background-image: none;
-    background: #f0f0f0;
-}
-
 .km-tablet .km-ios .km-navbar .km-view-title {
     color: #000;
     text-shadow: 0 -1px rgba(255,255,255,0.3);
@@ -282,12 +277,6 @@ body, html {
 
 .km-flat .km-list > li {
     box-shadow: none;
-}
-
-.km-ios .km-list > li,
-.km-flat .km-list > li {
-    background: none;
-    border: none;
 }
 
 /* Separator Style*/

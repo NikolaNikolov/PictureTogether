@@ -16,6 +16,7 @@
             } else {
                 navigator.notification.alert("The selected album has no location.",
                              function () {
+                                 app.application.navigate("#:back");
                              }, "No location", 'OK');
             }
         },
@@ -58,5 +59,4 @@
 
         viewModel: new AlbumLocationViewModel()
     };
-}
-)(window);
+})(window);

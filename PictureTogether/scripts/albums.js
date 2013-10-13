@@ -60,7 +60,7 @@
         },
 
         onAddExistingAlbum: function () {
-
+            app.application.navigate("views/add-existing-album.html");
         }
     });
 

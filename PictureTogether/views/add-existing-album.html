@@ -1,0 +1,20 @@
+﻿<div id="add-new-album"
+    data-role="view"
+    data-layout="tabstrip-layout-backbutton"
+    data-title="Enter share key"
+    data-model="app.addExistingAlbumService.viewModel">
+
+    <div class="view-content">
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label>
+                    Share code
+                        <input type="text" data-bind="value: shareCode" />
+                </label>
+            </li>
+        </ul>
+        <div class="buttonArea">
+            <a id="confirm-code" data-role="button" data-bind="click: onConfirmCode" class="simple-button">Confirm code</a>
+        </div>
+    </div>
+</div>

@@ -46,7 +46,7 @@
                     that.album.pictures.push({
                         url: imageURI
                     });
-                    that.uploadPhoto(imageURI)
+                    that.uploadPhoto(imageURI);
                 },
                 function (message) {
                     navigator.notification.alert("There seems to be a problem with your camera.",
@@ -80,7 +80,7 @@
                 }, function (error) {
                     navigator.notification.alert("Check your internet connection.",
                         function () {
-                        }, "Album request failed", 'OK');
+                        }, "Image upload failed", 'OK');
                     console.log("upload error code " + error.code);
                     console.log("upload error source " + error.source);
                     console.log("upload error target " + error.target);
