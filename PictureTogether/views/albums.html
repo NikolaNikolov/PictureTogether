@@ -1,13 +1,14 @@
 ﻿<div id="tabstrip-albums"
     data-role="view"
+    data-layout="tabstrip-layout"
     data-title="Albums"
     data-model="app.albumsService.viewModel"
-    data-show="app.albumsService.show"
-    data-hide="app.albumsService.hide">
+    data-show="app.albumsService.show">
 
     <div class="view-content">
         <div class="buttonArea">
-            <a id="add-album" data-role="button" data-bind="click: onAddAlbum" class="simple-button">Add new album</a>
+            <a id="add-new-album" data-role="button" data-bind="click: onAddNewAlbum" class="simple-button first-button">Add new album</a>
+            <a id="add-existing-album" data-role="button" data-bind="click: onAddExistingAlbum" class="simple-button">Add existing album</a>
         </div>
         <ul data-role="listview"
             data-bind="source: albumsDataSource"
@@ -17,7 +18,7 @@
 </div>
 
 <script type="text/x-kendo-tmpl" id="albums-template">
-    <a href="\#tabstrip-login?albumId=#: id #">
+    <a href="views/album-details.html?albumId=#: id #">
         #: name #
     </a>
 </script>

@@ -68,6 +68,7 @@
     <Content Include="kendo\styles\images\wp8_icons.png" />
     <Content Include="kendo\styles\images\wp8_inverseicons.png" />
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
+    <Content Include="scripts\album-details.js" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\http-requester.js" />
     <Content Include="scripts\libraries\rsvp.min.js" />
@@ -75,7 +76,7 @@
     <Content Include="scripts\albums.js" />
     <Content Include="scripts\location.js" />
     <Content Include="scripts\login.js" />
-    <Content Include="data\weather.json" />
+    <Content Include="scripts\pictures.js" />
     <Content Include="styles\images\icenium.png" />
     <Content Include="styles\images\icenium2x.png" />
     <Content Include="styles\images\location.png" />
@@ -99,7 +100,9 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+    <Content Include="views\album-details.html" />
     <Content Include="views\albums.html" />
+    <Content Include="views\pictures.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Resources\" />

@@ -1,0 +1,16 @@
+﻿<div id="pictures-view"
+    data-role="view"
+    data-layout="tabstrip-layout-backbutton"
+    data-title="Pictures"
+    data-model="app.picturesService.viewModel"
+    data-show="app.picturesService.show">
+
+    <div class="view-content">
+        <div id="pictures-listview">
+        </div>
+    </div>
+</div>
+
+<script id="listview-pictures-template" type="text/x-kendo-template">
+    <img class="image double-tap" src="#: url #"></img>
+</script>

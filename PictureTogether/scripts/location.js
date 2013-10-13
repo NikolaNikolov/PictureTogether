@@ -107,16 +107,11 @@
         },
 
         show: function () {
-            //show loading mask in case the location is not loaded yet 
-            //and the user returns to the same tab
             app.locationService.viewModel.showLoading();
-
-            //resize the map in case the orientation has been changed while showing other tab
             google.maps.event.trigger(map, "resize");
         },
 
         hide: function () {
-            //hide loading mask if user changed the tab as it is only relevant to location tab
             app.locationService.viewModel.hideLoading();
         },
 

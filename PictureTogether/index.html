@@ -9,7 +9,7 @@
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<!--    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>-->
 
     <script src="scripts/app.js"></script>
     <script src="scripts/libraries/sha1.js"></script>
@@ -17,11 +17,13 @@
     <script src="scripts/http-requester.js"></script>
     <script src="scripts/login.js"></script>
     <script src="scripts/albums.js"></script>
-
+    <script src="scripts/album-details.js"></script>
+    <script src="scripts/pictures.js"></script>
 </head>
 <body>
     <div id="tabstrip-login"
         data-role="view"
+        data-layout="tabstrip-layout"
         data-title="Account"
         data-model="app.loginService.viewModel">
 
@@ -53,16 +55,37 @@
 
     <div data-role="layout" data-id="tabstrip-layout">
         <div data-role="header">
-            <div data-role="navbar">
+            <div data-role="navbar" id="navbar">
                 <span data-role="view-title"></span>
             </div>
         </div>
         <div data-role="footer">
-            <div data-role="tabstrip" id="tabstrip">
+            <div data-role="tabstrip">
                 <a href="views/albums.html" data-icon="home">Albums</a>
                 <a href="#tabstrip-login" data-icon="contacts">Account</a>
             </div>
         </div>
     </div>
+
+    <div data-role="layout" data-id="tabstrip-layout-backbutton">
+        <div data-role="header">
+            <div data-role="navbar" id="Div1">
+                <a data-role="backbutton" data-align="left" data-bind="click: goBack">Back</a>
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+        <div data-role="footer">
+            <div data-role="tabstrip" data-selected-index="2">
+                <a href="views/albums.html" data-icon="home">Albums</a>
+                <a href="#tabstrip-login" data-icon="contacts">Account</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack (e) {
+            app.application.navigate("#:back");
+        }
+    </script>
 </body>
 </html>

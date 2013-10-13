@@ -48,8 +48,6 @@
         viewModel: new AlbumsViewModel(),
         show: function () {
             app.albumsService.viewModel.viewShow();
-        },
-        hide: function () {
         }
     };
 })(window);
