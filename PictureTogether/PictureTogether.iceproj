@@ -70,7 +70,9 @@
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\http-requester.js" />
-    <Content Include="scripts\weather.js" />
+    <Content Include="scripts\libraries\rsvp.min.js" />
+    <Content Include="scripts\libraries\sha1.js" />
+    <Content Include="scripts\albums.js" />
     <Content Include="scripts\location.js" />
     <Content Include="scripts\login.js" />
     <Content Include="data\weather.json" />
@@ -97,6 +99,7 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+    <Content Include="views\albums.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Resources\" />
@@ -111,8 +114,10 @@
     <Folder Include="kendo\js\" />
     <Folder Include="kendo\styles\" />
     <Folder Include="kendo\styles\images\" />
+    <Folder Include="views\" />
     <Folder Include="Plugins\" />
     <Folder Include="scripts\" />
+    <Folder Include="scripts\libraries\" />
     <Folder Include="styles\" />
     <Folder Include="styles\images\" />
   </ItemGroup>
