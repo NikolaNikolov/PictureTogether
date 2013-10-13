@@ -109,7 +109,11 @@
             app.username = response.username;
             storage.setItem("sessionsKey", response.sessionKey);
             storage.setItem("username", response.username);
-            storage.setItem("albums", JSON.stringify(response.albums));
+            if (response.albums) {
+                storage.setItem("albums", JSON.stringify(response.albums));
+            } else {
+                storage.setItem("albums", JSON.stringify([]));
+            }
             $("#tabstrip").show();
             that.navigateToAlbums();
         },

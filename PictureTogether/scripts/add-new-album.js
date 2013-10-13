@@ -51,7 +51,8 @@
             var that = this;
 
             app.application.pane.loader.hide();
-            app.application.navigate("views/albums.html?newAlbum" + JSON.stringify(response));
+            that.set("albumName", "");
+            app.application.navigate("views/albums.html?newAlbum=" + JSON.stringify(response));
         },
 
         unsuccessfulAlbumCreation: function (error) {

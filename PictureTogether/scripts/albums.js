@@ -6,6 +6,7 @@
     AlbumsViewModel = kendo.data.ObservableObject.extend({
         albumsDataSource: null,
         username: null,
+        album: null,
 
         init: function () {
             var that = this;
@@ -25,9 +26,17 @@
             var data;
             var newUsername = storage.getItem("username");
 
-            if (newAlbum) {
+            if (newAlbum && newAlbum !== that.album) {
+                that.album = newAlbum;
                 var albumToAdd = JSON.parse(newAlbum);
-                console.log(albumToAdd);
+                var currentAlbums = JSON.parse(storage.getItem("albums"));
+                currentAlbums.push(albumToAdd);
+                storage.setItem("albums", JSON.stringify(currentAlbums));
+                dataSource = new kendo.data.DataSource({
+                    data: currentAlbums
+                });
+
+                that.set("albumsDataSource", dataSource);
             } else if (newUsername !== that.username) {
                 data = storage.getItem("albums");
                 if (data !== "null") {

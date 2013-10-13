@@ -10,7 +10,8 @@
             <a id="add-new-album" data-role="button" data-bind="click: onAddNewAlbum" class="simple-button first-button">Add new album</a>
             <a id="add-existing-album" data-role="button" data-bind="click: onAddExistingAlbum" class="simple-button">Add existing album</a>
         </div>
-        <ul data-role="listview"
+        <ul id="albums-listview"
+            data-role="listview"
             data-bind="source: albumsDataSource"
             data-template="albums-template">
         </ul>

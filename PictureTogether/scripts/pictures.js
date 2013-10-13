@@ -24,7 +24,15 @@
     app.picturesService = {
         viewModel: new PicturesViewModel(),
         show: function (e) {
-            app.picturesService.viewModel.viewShow(JSON.parse(e.view.params.pictures));
+            var pictures = JSON.parse(e.view.params.pictures);
+            if (pictures.length == 0) {
+                navigator.notification.alert("Noone has uploaded a picture in this album.",
+                    function () {
+                        app.application.navigate("#:back");
+                    }, "No pictures", 'OK');
+            }
+
+            app.picturesService.viewModel.viewShow(pictures);
         }
     };
 })(window);
